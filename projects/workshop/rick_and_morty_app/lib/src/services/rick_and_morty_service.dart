@@ -102,7 +102,7 @@ class RickAndMortyService {
     catch (e) {
       Logger.error('API unknown error: $e.');
 
-      throw Exception('Erro desconhecido: $e');
+      throw Exception('Unknown error: $e');
     }
   }
 

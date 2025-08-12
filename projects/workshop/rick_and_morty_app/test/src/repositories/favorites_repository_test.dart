@@ -56,7 +56,7 @@ void main() {
       expect(repository.favorites, isNot(contains(characterA)));
     });
 
-    test('deve lidar com múltiplos personagens', () {
+    test('add multiple characters to favorites', () {
       repository.toggleFavorite(characterA);
       repository.toggleFavorite(characterB);
 
