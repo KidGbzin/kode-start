@@ -27,18 +27,18 @@ class _HomeController {
 
   // Essa funcao vai atualizar o endpoint e limpar a lista de personagens para o novo endpoint.
   // Usado no drawer lateral.
-  Future<void> updateEndpoint(BaseEndpoints baseEndpoint) async => {
-    endpoint = baseEndpoint,
+  Future<void> updateEndpoint(BaseEndpoints baseEndpoint) async {
+    endpoint = baseEndpoint;
 
     nListState.value = (
       characters: <Character> [],
       error: null,
       nextPage: null,
       isLoading: false,
-    ),
+    );
     
-    fetchCharacters(),
-  };
+    fetchCharacters();
+  }
 
   /// Atualiza [nListState] com os personagens ou da proxima pagina, query ou com o endpoint novo.
   Future<void> fetchCharacters({String? query, String? page}) async {
